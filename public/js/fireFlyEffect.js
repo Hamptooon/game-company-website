@@ -1,21 +1,20 @@
-// Количество светлячков
 const numberOfFireflies = 60;
-const container = document.querySelector('.fireflies-container');
+const fireflyContainers = document.querySelectorAll('.fireflies-container');
 
-function createFirefly() {
+function createFirefly(fireflyContainer) {
     const firefly = document.createElement('div');
     firefly.className = 'firefly';
-    container.appendChild(firefly);
+    fireflyContainer.appendChild(firefly);
     
-    // Устанавливаем случайные начальные позиции
+    
     firefly.style.top = `${Math.random() * 100}vh`;
     firefly.style.left = `${Math.random() * 100}vw`;
     
-    // Анимация перемещения светлячков
-    const duration = Math.random() * 10 + 5; // случайная продолжительность движения
+   
+    const duration = Math.random() * 10 + 5; 
     firefly.style.animation = `move ${duration}s linear infinite`;
     
-    // Анимация для случайного движения
+ 
     const keyframes = `
         @keyframes move {
             0% {
@@ -31,8 +30,8 @@ function createFirefly() {
     styleSheet.innerText = keyframes;
     document.head.appendChild(styleSheet);
 }
-
-// Создаем светлячков
-for (let i = 0; i < numberOfFireflies; i++) {
-    createFirefly();
-}
+fireflyContainers.forEach(fireflyContainer => {
+    for (let i = 0; i < numberOfFireflies; i++) {
+        createFirefly(fireflyContainer);
+    }
+});

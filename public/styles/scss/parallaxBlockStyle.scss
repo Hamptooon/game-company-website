@@ -1,12 +1,13 @@
 :root {
 	--index: calc(1vw + 1vh);
-	--text: #e7e7e0;
+	--text: #d3ffedd0;
 	--transition: transform .75s cubic-bezier(.075, .5, 0, 1);
 }
 p{
     margin-bottom: 15px;
-    text-indent: 15px;
-    color: #e0ffecd1;
+    letter-spacing: 2px;
+    text-align:justify;
+    color: var(--text);
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
     
 }
@@ -36,7 +37,7 @@ p{
 
         .info-parallax-layers__base{  
             transform: translate3d(0, calc(var(--scrollY) / 2), 0);
-            z-index: -102;
+            z-index: -100;
         }
         .info-parallax-layers__middle{
             transform: translate3d(0, calc(var(--scrollY) / 2.9), 0);
@@ -78,7 +79,7 @@ p{
                 text-align: left;
                 max-width: 1000px;
                 padding: 20px;
-                color: rgba(245, 245, 245, 0.886);
+                color: var(--text);
             }
             .info-parallax-layers__img{
                 display: flex;
@@ -103,7 +104,7 @@ p{
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-10px); /* Измените значение для настройки амплитуды плавания */
+        transform: translateY(-10px);
     }
     100% {
         transform: translateY(0);
@@ -124,19 +125,19 @@ p{
         top: 0;
         left: 0;
         right: 0;
-        height: 50%; /* Размер затемненной области сверху */
+        height: 50%; 
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 50%);
-        pointer-events: none; /* Чтобы не блокировать клики */
+        pointer-events: none; 
     }
     &::after {
         content: '';
         position: absolute;
-        bottom: 0; /* Начинаем градиент снизу */
+        bottom: 0;
         left: 0;
         right: 0;
-        height: 50%; /* Размер затемненной области снизу */
+        height: 50%; 
         background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 50%);
-        pointer-events: none; /* Чтобы не блокировать клики */
+        pointer-events: none; 
     }
     
     
@@ -159,17 +160,144 @@ p{
         top: 0;
         left: 0;
         right: 0;
-        height: 50%; /* Размер затемненной области сверху */
+        height: 50%; 
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 50%);
-        pointer-events: none; /* Чтобы не блокировать клики */
+        pointer-events: none; 
+    }
+
+    .games-info__content{
+        padding: 120px;
+        padding-top: 200px;
+        display: flex;
+        flex-direction: column;
+        min-height: inherit;
+        width: 90%; 
+        justify-content: flex-start;
+        align-items: center;
+        .games-info__header{
+            font-size: 50px;
+            font-weight: bold;
+            color: #ceffe6cc;
+            text-shadow: 0 0 7px rgba(54, 255, 151, 0.811);
+            animation: float 7s ease-in-out infinite;
+        }
+        .games-info__container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 1250px;
+            margin-top: 30px;
+            .game-card{
+                position: relative;
+                display: flex;
+                align-items:flex-start;
+                justify-content: center;
+                background-position: center;
+                background-size: cover;
+                width: 400px;
+                height: 600px;
+                border-radius: 5px;
+                box-shadow: 0 0 120px rgba(54, 255, 151, 0.288);
+                padding: 30px;
+                padding-top: 100px;
+                -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, 
+                color-stop(0, rgba(0, 0, 0, 0.089)),     
+                color-stop(0.2, rgb(0, 0, 0)),    
+                color-stop(0.5, rgba(0,0,0,1)),  
+                color-stop(0.55, rgba(0,0,0,1)), 
+                color-stop(0.7, rgb(0, 0, 0)),   
+                color-stop(1, rgba(0,0,0,0))    
+);
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 50%; 
+                    background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+                    pointer-events: none; 
+                    z-index: 1; 
+                  }
+                 
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0); 
+                    transition: background-color 0.3s ease; 
+                    z-index: 1;
+                  }
+              
+                  
+                  &:hover::before {
+                    background-color: rgba(0, 15, 7, 0.8);
+                  }
+                .game-card__content{
+                    z-index: 1;
+                }
+                .game-card__title{
+                    font-size: 50px;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    color: #ceffe6cc;
+                    text-shadow: 0 0 7px rgba(54, 255, 151, 0.811);
+                    margin-bottom: 30px;
+                }
+                .game-card__description{
+                    margin-bottom: 40px;
+                    p{
+                        text-align: left;
+                        font-size: 18px;
+                    }
+
+                }
+                .game-card__btn{
+                    position: relative;
+                    padding: 20px;
+                    &::before{
+                        content: '';
+                        top: -10px;
+                        left: 65px;
+                        position: absolute;
+                        background-image: url('../../../assets/img/btn-background.png');
+                        opacity: 0.7;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        width: 200px;
+                        height: 100px;
+
+                    }
+                    a{
+                        position: relative;
+                        z-index: 1;
+                        font-size: 24px;
+                        color: #ceffe6cc;
+                        text-shadow: 0 0 7px rgba(54, 255, 151, 0.811);
+                    }
+                    
+                }
+                .game-card__btn {
+                    opacity: 0; 
+                    transform: translateY(20px);
+                    transition: opacity 0.3s ease, transform 0.3s ease;
+                  }
+              
+                  
+                  &:hover .game-card__btn {
+                    opacity: 1; 
+                    transform: translateY(0); 
+                  }
+
+            }
+        }
     }
     
 }
 
-@font-face {
-    // название шрифта(чтобы не запутаться лучше указать название папки со шрифтом) 
-    font-family: 'ShoraiSansStdNVar', 'Kramola';
-    src: url("../../../assets/fonts/ShoraiSansStdNVar.ttf");
-    font-style: normal; 
-    font-weight: normal; 
-  } 
+ 

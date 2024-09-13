@@ -23,10 +23,7 @@ function randomTextAnimation(text) {
     }, 180);
 }
 
-// // Usage
-// const originalText = "Hello, world!";
 let textToAnimation = document.querySelectorAll(".animation-text");
 textToAnimation.forEach(text => {
     randomTextAnimation(text);
 });
-// randomTextAnimation(originalText);
