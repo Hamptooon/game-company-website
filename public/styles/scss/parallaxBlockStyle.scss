@@ -1,16 +1,5 @@
-:root {
-	--index: calc(1vw + 1vh);
-	--text: #d3ffedd0;
-	--transition: transform .75s cubic-bezier(.075, .5, 0, 1);
-}
-p{
-    margin-bottom: 15px;
-    letter-spacing: 2px;
-    text-align:justify;
-    color: var(--text);
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
-    
-}
+
+
 .info-parallax{
     position: relative;
     &::after{
@@ -55,13 +44,16 @@ p{
             letter-spacing: 3px;
             width: 80%;
             height: 80%;
+            @media screen and (max-width: 1200px) {
+                flex-direction: column;
+            }
 
             .info-parallax__text-content{
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                max-width: 40%;
+                min-width: 40%;
             }
             .info-parallax-layers__title{
                 text-transform: uppercase;
@@ -73,6 +65,19 @@ p{
                 text-shadow: 0 0 7px rgba(54, 255, 151, 0.811);
                 font-size: 70px;
                 animation: float 10s ease-in-out infinite;
+                @media screen and (max-width: 1400px) {
+                    font-size: 45px;
+                }
+                @media screen and (max-width: 1000px) {
+                    font-size: 35px;
+                }
+                @media screen and (max-width: 860px) {
+                    font-size: 30px;
+                }
+                @media screen and (max-width: 420px) {
+                    font-size: 24px;
+                }
+                
             }
             .info-parallax-layers__text{
                 font-size: 24px;
@@ -80,6 +85,18 @@ p{
                 max-width: 1000px;
                 padding: 20px;
                 color: var(--text);
+                @media screen and (max-width: 1400px) {
+                    font-size: 24px;
+                  }
+                @media screen and (max-width: 1000px) {
+                    font-size: 20px;
+                  }
+                  @media screen and (max-width: 860px) {
+                    font-size: 15px;
+                  }
+                  @media screen and (max-width: 420px) {
+                    font-size: 12px;
+                  }
             }
             .info-parallax-layers__img{
                 display: flex;
@@ -91,7 +108,7 @@ p{
                 height: auto;
                 animation: float 6s ease-in-out infinite;
                 img{
-                    max-width: 80%;
+                    max-width: 100%;
                 }
             }
             
@@ -166,27 +183,44 @@ p{
     }
 
     .games-info__content{
-        padding: 120px;
         padding-top: 200px;
         display: flex;
         flex-direction: column;
         min-height: inherit;
-        width: 90%; 
+        width: 100%; 
         justify-content: flex-start;
         align-items: center;
         .games-info__header{
+            display: block;
+            width: 100%;
             font-size: 50px;
             font-weight: bold;
+            text-transform: uppercase;
             color: #ceffe6cc;
             text-shadow: 0 0 7px rgba(54, 255, 151, 0.811);
             animation: float 7s ease-in-out infinite;
+            @media screen and (max-width: 1400px) {
+                font-size: 45px;
+            }
+            @media screen and (max-width: 1000px) {
+                font-size: 35px;
+            }
+            @media screen and (max-width: 860px) {
+                font-size: 30px;
+            }
+            @media screen and (max-width: 420px) {
+                font-size: 24px;
+            }
         }
         .games-info__container{
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 1250px;
+            width: 90%;
             margin-top: 30px;
+            @media screen and (max-width: 1300px) {
+                flex-direction: column;
+            }
             .game-card{
                 position: relative;
                 display: flex;
@@ -194,7 +228,7 @@ p{
                 justify-content: center;
                 background-position: center;
                 background-size: cover;
-                width: 400px;
+                width: 33.3%;
                 height: 600px;
                 border-radius: 5px;
                 box-shadow: 0 0 120px rgba(54, 255, 151, 0.288);
@@ -207,8 +241,10 @@ p{
                 color-stop(0.55, rgba(0,0,0,1)), 
                 color-stop(0.7, rgb(0, 0, 0)),   
                 color-stop(1, rgba(0,0,0,0))    
-);
-
+                );
+                @media screen and (max-width: 1300px) {
+                    width: 90%;
+                }
                 &::before {
                     content: '';
                     position: absolute;
@@ -241,18 +277,25 @@ p{
                     z-index: 1;
                 }
                 .game-card__title{
-                    font-size: 50px;
+                    font-size: 45px;
                     text-transform: uppercase;
                     font-weight: bold;
-                    color: #ceffe6cc;
-                    text-shadow: 0 0 7px rgba(54, 255, 151, 0.811);
+                    color: #ceffe2cc;
+                    text-shadow: 0 0 7px rgba(54, 255, 205, 0.811);
                     margin-bottom: 30px;
+                    animation: float 8s ease-in-out infinite;
+                    @media screen and (max-width: 1400px) {
+                        font-size: 35px;
+                    }
+                    @media screen and (max-width: 1000px) {
+                        font-size: 30px;
+                    }
                 }
                 .game-card__description{
                     margin-bottom: 40px;
                     p{
                         text-align: left;
-                        font-size: 18px;
+                        font-size: 16px;
                     }
 
                 }

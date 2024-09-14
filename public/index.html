@@ -6,13 +6,18 @@
   <meta name="keywords" content="игры, славянская мифология, RPG, экшен, стратегия">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>GROW GAMES</title>
+  <link rel="stylesheet" href="./styles/css/baseStyle.css">
+  <link rel="stylesheet" href="./styles/css/burgerMenu.css">
   <link rel="stylesheet" href="./styles/css/style.css">
   <link rel="stylesheet" href="./styles/css/nullStyle.css">
   <link rel="stylesheet" href="./styles/css/parallaxBlockStyle.css">
   <link rel="stylesheet" href="./styles/css/fireFly.css">
+  <link rel="stylesheet" href="./styles/css/contactStyle.css">
+  <link rel="stylesheet" href="./styles/css/footerStyle.css">
   <script src="../libs/gsap/gsap.min.js" defer></script>
   <script src="../libs/gsap/ScrollTrigger.min.js" defer></script>
   <script src="../libs/gsap/ScrollSmoother.min.js" defer></script>
+  <script src="./js/hamMenu.js" defer></script>
   <script src="./js/randomTextAnimation.js" defer></script>
   <script src="./js/parallaxEffect.js" defer></script>
   <script src="./js/fireflyEffect.js" defer></script>
@@ -21,15 +26,35 @@
   
   <div class="wrapper">
     <div class="content">
+      <div class="burger-menu">
+        <div class="burger-menu__icon">
+          <span></span>
+          <span></span>
+          <span></span>
+            
+        </div>
+        <div class="burger-menu__content">
+          <nav>
+            <ul>
+              <li><a href="#home">Главная</a></li>
+              <li><a href="#games">Игры</a></li>
+              <li><a href="#about">О нас</a></li>
+              <li><a href="#blog">Блог</a></li>
+              <li><a href="#contact">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
       <main>
         <div class="preview-block-container">
           <!-- <div class="header-background"></div> -->
           <header>
+            
             <div class="nav-container">
               <div class="menu-left">
                 <nav>
       
-                  <div class="row">
+                  <div class="nav-row">
                     <div class="header-logo">
                       <a href="#home">
                         <img src="../assets/img/logo5.png" alt="">
@@ -46,8 +71,9 @@
                   </div>
                 </nav>
               </div>
+              
               <div class="menu-right">
-                <div class="row">
+                <div class="social-row">
                   <a href="">
                     <img src="../assets/img/icons/loon-icon (1).svg" alt="">
                   </a>
@@ -65,6 +91,25 @@
                   <img src="../assets/img/icons/loon-icon (2).svg" alt="">
                 </div>
               </div>
+              <!-- <div class="burger-menu">
+                <div class="burger-menu__icon">
+                  <svg width="40" height="40" viewBox="0 0 501 301" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 17H308.667M17 150.333H483.667M192 283.667H483.667" stroke="#D0FFE9" stroke-width="33.3333" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                    
+                </div>
+                <div class="burger-menu__content">
+                  <nav>
+                    <ul>
+                      <li><a href="#home">Главная</a></li>
+                      <li><a href="#games">Игры</a></li>
+                      <li><a href="#about">О нас</a></li>
+                      <li><a href="#blog">Блог</a></li>
+                      <li><a href="#contact">Контакты</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div> -->
             </div>
       
           </header>
@@ -114,8 +159,7 @@
                 <div class="game-card__content">
                   <h3 class="game-card__title">Time To Rise</h3>
                   <div class="game-card__description">
-                    <p>Спасите Землю! Избавьтесь от пластика и мусора в наших океанах.</p>
-                    <p>Начните очищать океан, нажимая на экран, тренируйте эко менеджеров активнее собирать и сортировать пластиковые бутылки!</p>
+                    <p>Откройте двери в мир славянских легенд! Исследуйте древние леса и раскройте тайны мифических существ.</p>
                   </div>
                   <div class="game-card__btn">
                     <a href = "#home" >Подробнее</a>
@@ -126,9 +170,9 @@
                 <!-- <img src="../assets/img/games/darkRise.jpeg" alt="">
                  -->
                 <div class="game-card__content">
-                  <h3 class="game-card__title">Grim Dark</h3>
+                  <h3 class="game-card__title">Dark Rise</h3>
                   <div class="game-card__description">
-                    <p>Спасите Землю! Избавьтесь от пластика и мусора в наших океанах.</p> <p>Начните очищать океан, нажимая на экран, тренируйте эко менеджеров активнее собирать и сортировать пластиковые бутылки!</p>
+                    <p>Погрузитесь в мрак и тьму постапокалиптического мира! Обороняйте свои последние оплоты от опасных монстров и мрачных существ.</p>
                   </div>
                   <div class="game-card__btn">
                     <a href = "#home" >Подробнее</a>
@@ -139,12 +183,80 @@
                 <div class="game-card__content">
                   <h3 class="game-card__title">Blackbook</h3>
                   <div class="game-card__description">
-                    <p>Спасите Землю! Избавьтесь от пластика и мусора в наших океанах.</p>
-                    <p>Начните очищать океан, нажимая на экран, тренируйте эко менеджеров активнее собирать и сортировать пластиковые бутылки!</p>
+                    <p>Войдите в мир тёмной магии и мистических тайн вместе с молодой ведьмой в Blackbook!</p>
                   </div>
                   <div class="game-card__btn">
                     <a href = "#home" >Подробнее</a>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-wrapper">
+          <div class="contact">
+            
+            <div class="contact-header">
+              <h2 class="contact-header__title">
+                Контакты
+              </h2>
+            </div>
+            <div class="contact-content">
+              <div class="contact-content__header">
+                <h3 class="contact-content__title">Мы в соцсетях</h3>
+              </div>
+              <div class="contact-content__social">
+                <div class="contact-content__social-row">
+                  <a href="#" class="contact-content__social-link">
+                    <img src="../assets/img/social/RuTube.svg" alt="">
+                  </a>
+                  <a href="#" class="contact-content__social-link">
+                    <img src="../assets/img/social/tiktok.svg" alt="">
+                  </a>
+                  <a href="#" class="contact-content__social-link">
+                    <img src="../assets/img/social/yotube.svg" alt="">
+                  </a>
+                </div>
+                <div class="contact-content__social-row">
+                  <a href="#" class="contact-content__social-link">
+                    <img src="../assets/img/social/dtf.svg" alt="">
+                  </a>
+                  <a href="#" class="contact-content__social-link">
+                    <img src="../assets/img/social/vk.svg" alt="">
+                  </a>
+                  <a href="#" class="contact-content__social-link">
+                    <img src="../assets/img/social/telegram.svg" alt="">
+                  </a>
+                </div>
+              </div>
+              <div class="contact__form-map">
+                <div class="contact__form">
+                  
+                  <form action="" method="post" >
+                    <div class="contact__form-description">
+                      <h3 class="contact__form-title">Форма обратной связи</h3>
+                      <p class = "contact__form-text">Если у вас есть вопросы или предложения, напишите нам!</p>
+                      <span class = "contact__form-remark">Поля отмеченные звездочкой* обязательны к заполнению</span>
+                    </div>
+                    <div class="contact__form-row">
+                      <label for="name">Имя</label>
+                      <input type="text" id="name" name="name">
+                    </div>
+                    <div class="contact__form-row">
+                      <label for="email">Email</label>
+                      <input type="email" id="email" name="email">
+                    </div>
+                    <div class="contact__form-row">
+                      <label for="message">Сообщение</label>
+                      <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="contact__form-row">
+                      <button type="submit">Отправить</button>
+                    </div>
+                  </form>
+                </div>
+                <div class="contact__map">
+                  <a href="https://goo.gl/maps/z97f1wSmxF24XYJm6" target="_blank"><img src="../assets/img/map.png" alt=""></a>
                 </div>
               </div>
             </div>
@@ -155,6 +267,36 @@
       </main>
       
       <footer>
+        <div class = "footet-container">
+          <div class="footer-nav">
+            <div class="footer-nav__row">
+              <div class="social-row">
+                <a href="">
+                  <img src="../assets/img/icons/loon-icon (1).svg" alt="">
+                </a>
+                <a href="">
+                  <img src="../assets/img/icons/loon-icon (2).svg" alt="">
+                </a>
+                <a href="">
+                  <img src="../assets/img/icons/loon-icon (3).svg" alt="">
+                </a>
+                <a href="">
+                  <img src="../assets/img/icons/loon-icon (4).svg" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-license">
+            <p>
+              © 2024 Slimao Ltd. Grow Games are registered trademarks of Slimao Ltd. Softworks, graphic content, characters, storylines and all other elements of the game are registered intellectual property of Slimao Ltd. No element of this website can be copied or given to a third party in any way without written permission from Slimao Ltd. All rights reserved.
+            </p>
+            <div class="footer-license__links">
+              <a href="#">Privacy & Cookie Policy</a>
+              <a href="#">Terms of Use</a>
+              <a href="#">Contest rules</a>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
   </div>
